@@ -140,18 +140,18 @@ nav {
 .monument-slider {
     position: relative;
     width: 100%;
-    height: calc(100vh - 60px);
-    overflow: hidden;
+    min-height: 100vh;
+    overflow: visible;
 }
 
 .monument-slide {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     opacity: 0;
     transition: opacity 0.5s ease;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -160,22 +160,10 @@ nav {
     z-index: 1;
 }
 
-/* 內容樣式 */
-.monument-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
 .monument-image {
     width: 100%;
-    height: 500px;
+    height: auto;
+    min-height: 200px;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -184,6 +172,7 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .monument-info {
@@ -461,6 +450,29 @@ nav {
     .monument-info .subtitle {
         font-size: 1rem;
     }
+
+    .monument-slider {
+        min-height: auto;
+        margin-top: 60px;
+    }
+
+    .monument-slide {
+        position: relative;
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .monument-image {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .monument-content {
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -475,7 +487,8 @@ nav {
 
     .monument-image {
         height: 200px;
-        margin-bottom: 1rem;
+        width: 100%;
+        margin: 0 auto 1rem auto;
     }
 
     .monument-info {
@@ -507,6 +520,18 @@ nav {
     .monument-description {
         text-align: justify;
         padding: 0 0.5rem;
+    }
+
+    .monument-slider {
+        margin-top: 50px;
+    }
+
+    .monument-slide {
+        padding: 0.5rem;
+    }
+
+    .monument-content {
+        padding: 0.5rem;
     }
 }
 
