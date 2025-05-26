@@ -398,24 +398,37 @@ nav {
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .monument-image {
         height: 300px;
+        order: 1;
     }
 
     .monument-info {
         padding: 1rem;
+        order: 2;
     }
 
     .monument-info h1 {
         font-size: 2rem;
+        text-align: center;
+    }
+
+    .monument-info .subtitle {
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 768px) {
     .monument-container {
         padding-top: 80px;
+    }
+
+    .monument-content {
+        gap: 0.5rem;
     }
 
     .monument-image {
@@ -442,6 +455,7 @@ nav {
 
     .monument-info h1 {
         font-size: 1.8rem;
+        margin-top: 1rem;
     }
 
     .monument-info .subtitle {
@@ -454,12 +468,14 @@ nav {
         padding-top: 70px;
     }
 
-    .monument-image {
-        height: 200px;
+    .monument-content {
+        padding: 0.8rem;
+        gap: 0.5rem;
     }
 
-    .monument-content {
-        padding: 0.5rem;
+    .monument-image {
+        height: 200px;
+        margin-bottom: 1rem;
     }
 
     .monument-info {
@@ -486,6 +502,11 @@ nav {
     .dot {
         width: 8px;
         height: 8px;
+    }
+
+    .monument-description {
+        text-align: justify;
+        padding: 0 0.5rem;
     }
 }
 
