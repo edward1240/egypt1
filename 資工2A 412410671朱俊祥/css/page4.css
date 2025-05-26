@@ -140,24 +140,37 @@ nav {
 .monument-slider {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    overflow: visible;
+    height: auto;
+    overflow: hidden;
 }
 
 .monument-slide {
-    position: relative;
+    position: absolute;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    display: none;
 }
 
 .monument-slide.active {
     opacity: 1;
     z-index: 1;
+    position: relative;
+    display: block;
+}
+
+.monument-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: auto;
 }
 
 .monument-image {
@@ -387,152 +400,76 @@ nav {
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1rem;
-        display: flex;
-        flex-direction: column;
     }
 
     .monument-image {
         height: 300px;
-        order: 1;
-    }
-
-    .monument-info {
-        padding: 1rem;
-        order: 2;
-    }
-
-    .monument-info h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .monument-info .subtitle {
-        text-align: center;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .monument-container {
-        padding-top: 80px;
+    .monument-slider {
+        margin-top: 60px;
     }
 
     .monument-content {
         gap: 0.5rem;
+        min-height: 600px; /* 設定最小高度 */
     }
 
     .monument-image {
         height: 250px;
     }
 
-    .info-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .nav-arrow {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nav-arrow.left {
-        left: 10px;
-    }
-
-    .nav-arrow.right {
-        right: 10px;
-    }
-
-    .monument-info h1 {
-        font-size: 1.8rem;
-        margin-top: 1rem;
-    }
-
-    .monument-info .subtitle {
-        font-size: 1rem;
-    }
-
-    .monument-slider {
-        min-height: auto;
-        margin-top: 60px;
-    }
-
-    .monument-slide {
-        position: relative;
-        min-height: auto;
-        padding: 1rem;
-    }
-
-    .monument-image {
-        width: 100%;
-        height: 250px;
-        margin: 0 auto;
-    }
-
-    .monument-content {
-        margin: 0;
-        width: 100%;
-        box-sizing: border-box;
+    .monument-info {
+        height: auto;
+        display: flex;
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .monument-container {
-        padding-top: 70px;
+    .monument-slider {
+        margin-top: 50px;
     }
 
     .monument-content {
         padding: 0.8rem;
-        gap: 0.5rem;
+        min-height: 500px; /* 調整手機版的最小高度 */
     }
 
     .monument-image {
         height: 200px;
-        width: 100%;
-        margin: 0 auto 1rem auto;
     }
 
     .monument-info {
         padding: 0.5rem;
     }
 
-    .monument-info h1 {
-        font-size: 1.5rem;
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
     }
+}
 
-    .info-item {
-        padding: 0.8rem;
-    }
+/* 確保所有幻燈片內容一致的高度 */
+.monument-slide {
+    min-height: 100%;
+}
 
-    .nav-arrow {
-        width: 35px;
-        height: 35px;
-    }
+.monument-info {
+    display: flex;
+    flex-direction: column;
+}
 
-    .nav-dots {
-        bottom: 10px;
-    }
+.info-grid {
+    flex: 1;
+    margin-bottom: 1rem;
+}
 
-    .dot {
-        width: 8px;
-        height: 8px;
-    }
-
-    .monument-description {
-        text-align: justify;
-        padding: 0 0.5rem;
-    }
-
-    .monument-slider {
-        margin-top: 50px;
-    }
-
-    .monument-slide {
-        padding: 0.5rem;
-    }
-
-    .monument-content {
-        padding: 0.5rem;
-    }
+.monument-description {
+    margin-top: auto;
 }
 
 /* 可以在這裡添加更多 page4 專屬的樣式 */ 
