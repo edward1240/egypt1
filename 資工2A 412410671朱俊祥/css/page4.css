@@ -392,4 +392,101 @@ nav {
     }
 }
 
+/* 響應式設計調整 */
+@media screen and (max-width: 1024px) {
+    .monument-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .monument-image {
+        height: 300px;
+    }
+
+    .monument-info {
+        padding: 1rem;
+    }
+
+    .monument-info h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .monument-container {
+        padding-top: 80px;
+    }
+
+    .monument-image {
+        height: 250px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-arrow.left {
+        left: 10px;
+    }
+
+    .nav-arrow.right {
+        right: 10px;
+    }
+
+    .monument-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .monument-info .subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .monument-container {
+        padding-top: 70px;
+    }
+
+    .monument-image {
+        height: 200px;
+    }
+
+    .monument-content {
+        padding: 0.5rem;
+    }
+
+    .monument-info {
+        padding: 0.5rem;
+    }
+
+    .monument-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .info-item {
+        padding: 0.8rem;
+    }
+
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-dots {
+        bottom: 10px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
 /* 可以在這裡添加更多 page4 專屬的樣式 */ 
