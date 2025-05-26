@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>埃及古蹟探索 - 金字塔與神廟的國度</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/page4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../javascript/page4.js" defer></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="../index.html" class="nav-button">首頁</a>
+            <a href="../page1/page1.html" class="nav-button">神話傳說</a>
+            <a href="../page2/page2.html" class="nav-button">地理風貌</a>
+            <a href="../page3/page3.html" class="nav-button">美食文化</a>
+        </div>
+    </nav>
+
+    <div class="monument-container">
+        <!-- 左箭頭 -->
+        <button class="nav-arrow left" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- 右箭頭 -->
+        <button class="nav-arrow right" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- 古蹟輪播容器 -->
+        <div class="monument-slider">
+            <!-- 吉薩金字塔 -->
+            <div class="monument-slide active">
+                <div class="monument-content">
+                    <div class="monument-image">
+                        <img src="../image/吉薩金字塔.jpg" alt="吉薩金字塔">
+                    </div>
+                    <div class="monument-info">
+                        <h1>吉薩金字塔</h1>
+                        <p class="subtitle">世界七大奇蹟之一</p>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h3>建造年代</h3>
+                                <p>約公元前2560年</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>高度</h3>
+                                <p>146.5公尺</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>建造目的</h3>
+                                <p>法老胡夫的陵墓</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>位置</h3>
+                                <p>開羅郊區吉薩高原</p>
+                            </div>
+                        </div>
+                        <div class="monument-description">
+                            <p>吉薩金字塔是古埃及文明最著名的建築之一，也是世界上現存最古老的建築奇蹟。它由約230萬塊石灰岩砌塊建成，每塊重達2.5噸，建造工程歷時約20年。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 獅身人面像 -->
+            <div class="monument-slide">
+                <div class="monument-content">
+                    <div class="monument-image">
+                        <img src="../image/獅身人面像.jpg" alt="獅身人面像">
+                    </div>
+                    <div class="monument-info">
+                        <h1>獅身人面像</h1>
+                        <p class="subtitle">守護金字塔的神秘守護者</p>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h3>建造年代</h3>
+                                <p>約公元前2500年</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>高度</h3>
+                                <p>20公尺</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>長度</h3>
+                                <p>73公尺</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>材質</h3>
+                                <p>石灰岩</p>
+                            </div>
+                        </div>
+                        <div class="monument-description">
+                            <p>獅身人面像是古埃及最具代表性的雕像之一，相傳其面容是仿照法老赫夫拉的容貌。它象徵著智慧與力量的結合，數千年來一直守護著吉薩金字塔群。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 盧克索神廟 -->
+            <div class="monument-slide">
+                <div class="monument-content">
+                    <div class="monument-image">
+                        <img src="../image/盧克索神廟.jpg" alt="盧克索神廟">
+                    </div>
+                    <div class="monument-info">
+                        <h1>盧克索神廟</h1>
+                        <p class="subtitle">古埃及新王國時期的宗教中心</p>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h3>建造年代</h3>
+                                <p>約公元前1400年</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>面積</h3>
+                                <p>約850,000平方米</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>主祭神</h3>
+                                <p>阿蒙神</p>
+                            </div>
+                            <div class="info-item">
+                                <h3>位置</h3>
+                                <p>盧克索市中心</p>
+                            </div>
+                        </div>
+                        <div class="monument-description">
+                            <p>盧克索神廟是古埃及最重要的宗教建築之一，由拉美西斯二世等多位法老參與建造。神廟內保存了大量精美的浮雕和象形文字，記錄了古埃及的歷史與宗教文化。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 導航點 -->
+        <div class="nav-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </div>
+
+    <!-- 相關資訊區塊 -->
+    <div class="additional-info">
+        <h2>參觀資訊</h2>
+        <div class="info-container">
+            <!-- 吉薩金字塔參觀資訊 -->
+            <div class="info-section" id="pyramid-info">
+                <h3 class="section-title">吉薩金字塔</h3>
+                <div class="info-box">
+                    <i class="fas fa-clock"></i>
+                    <h3>開放時間</h3>
+                    <p>夏季（4月-9月）</p>
+                    <p>7:00 - 19:00</p>
+                    <p>冬季（10月-3月）</p>
+                    <p>8:00 - 17:00</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>門票資訊</h3>
+                    <p>成人：240埃鎊</p>
+                    <p>學生（有效證件）：120埃鎊</p>
+                    <p>金字塔內部參觀：另收400埃鎊</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>交通方式</h3>
+                    <p>從開羅市中心搭乘地鐵到吉薩站</p>
+                    <p>轉乘公車或計程車前往景區</p>
+                    <p>建議參加旅行團或包車前往</p>
+                </div>
+            </div>
+
+            <!-- 獅身人面像參觀資訊 -->
+            <div class="info-section" id="sphinx-info">
+                <h3 class="section-title">獅身人面像</h3>
+                <div class="info-box">
+                    <i class="fas fa-clock"></i>
+                    <h3>開放時間</h3>
+                    <p>與吉薩金字塔相同</p>
+                    <p>夏季：7:00 - 19:00</p>
+                    <p>冬季：8:00 - 17:00</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>門票資訊</h3>
+                    <p>包含在吉薩金字塔門票內</p>
+                    <p>無需額外購票</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>交通方式</h3>
+                    <p>位於吉薩金字塔景區內</p>
+                    <p>步行即可到達</p>
+                </div>
+            </div>
+
+            <!-- 盧克索神廟參觀資訊 -->
+            <div class="info-section" id="luxor-info">
+                <h3 class="section-title">盧克索神廟</h3>
+                <div class="info-box">
+                    <i class="fas fa-clock"></i>
+                    <h3>開放時間</h3>
+                    <p>夏季：6:00 - 21:00</p>
+                    <p>冬季：6:00 - 22:00</p>
+                    <p>夜間燈光秀：19:00 - 22:00</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>門票資訊</h3>
+                    <p>成人：160埃鎊</p>
+                    <p>學生（有效證件）：80埃鎊</p>
+                    <p>夜間燈光秀：額外140埃鎊</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>交通方式</h3>
+                    <p>從盧克索機場搭乘計程車約20分鐘</p>
+                    <p>市區內可步行或搭乘馬車前往</p>
+                    <p>建議住宿在盧克索市區內</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

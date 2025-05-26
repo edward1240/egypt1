@@ -1,0 +1,204 @@
+body {
+    font-family: '微軟正黑體', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f5d6a6 0%, #d4af37 100%);
+}
+
+nav {
+    width: 100%;
+    background-color: #8B4513;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+.nav-button:hover {
+    background-color: #ddd;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 20px;
+}
+
+h1 {
+    color: #8B4513;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    margin: 2rem 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+    width: 40%;  /* 將圖片寬度設為50% */
+    margin: 0 auto;
+    display: block;
+}
+
+.main-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-item {
+    background-color: #fff9f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h2 {
+    color: #8B4513;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.feature-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #8B4513;
+    color: #f5d6a6;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.feature-link:hover {
+    background-color: #a0522d;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-button {
+        width: 80%;
+        text-align: center;
+        margin: 5px 0;
+        padding: 15px 20px; /* 在手機上增加點擊區域 */
+        font-size: 1.1em; /* 在手機上增加字體大小 */
+    }
+
+    .home-button {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 1rem;
+        margin-top: 100px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .feature-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-links {
+        padding: 0.5rem;
+        gap: 0.3rem;
+    }
+
+    .nav-button {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0.8rem;
+        margin-top: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-grid {
+        gap: 1rem;
+    }
+
+    .feature-item {
+        padding: 1rem;
+    }
+} 
